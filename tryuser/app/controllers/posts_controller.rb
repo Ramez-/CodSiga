@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def check
-    if(session[:user_id] != params[:user_id])
+    if(session[:user_id] != Post.find(params[:id]).user_id)
        redirect_to posts_path , notice: "Can not edit a post that does not belong to you"
        false
     end
