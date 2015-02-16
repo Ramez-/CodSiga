@@ -1,0 +1,24 @@
+<h1>
+	Add a new Comment
+</h1>
+
+<%= form_for @c do |c| %>
+	<% if @c.errors.any? %>
+		<h2>Errors</h2>
+		<ul>
+			<% @c.errors.full_messages.each do |msg| %>
+				<li>
+					<%= msg %>
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+	<p>
+		<%= c.label :content %> <br />
+		<%= c.text_area :content %>
+	</p>
+
+	<p>
+		<%= c.submit "Add a new Comment" %> <br />
+	</p>
+<% end %>

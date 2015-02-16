@@ -1,0 +1,16 @@
+<h1>Comments</h1>
+
+<% @c.each do |c| %>
+	<p>	
+		<%= c.content %>
+	</p>
+	<p>
+		<%= link_to "Edit" , edit_comment_path(c) %> |
+		<%= link_to "Delete" , c , data: {confirm: "Are you sure?"} , method: :delete %>
+	</p>
+	<hr/>
+<% end %>
+
+<p>
+	<%= link_to "Add a new comment" , new_comment_path %>
+</p>
