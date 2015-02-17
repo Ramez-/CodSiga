@@ -1,16 +1,15 @@
-<%= form_for(@c) do |f| %>
-  <% if @c.errors.any? %>
+<%= form_for([@post , @comment]) do |f| %>
+  <% if @comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@c.errors.count, "error") %> prohibited this c from being saved:</h2>
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
       <ul>
-      <% @c.errors.full_messages.each do |message| %>
+      <% @comment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
 
   <div class="field">
     <%= f.label :content %><br>

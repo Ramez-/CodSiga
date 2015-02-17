@@ -1,7 +1,9 @@
+<p id="notice"><%= notice %></p>
+
 <p>
-	<%= @c.content %>
+  <strong>Content:</strong>
+  <%= @comment.content %>
 </p>
 
-<small>
-	<%= @c.created_at %>
-</small>
+<%= link_to 'Edit', edit_post_comment_path(@post , @comment) %> |
+<%= link_to 'Back', @post %>

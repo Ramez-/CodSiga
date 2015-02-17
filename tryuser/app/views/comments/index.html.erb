@@ -1,16 +1,27 @@
-<h1>Comments</h1>
+<p id="notice"><%= notice %></p>
 
-<% @c.each do |c| %>
-	<p>	
-		<%= c.content %>
-	</p>
-	<p>
-		<%= link_to "Edit" , edit_comment_path(c) %> |
-		<%= link_to "Delete" , c , data: {confirm: "Are you sure?"} , method: :delete %>
-	</p>
-	<hr/>
-<% end %>
+<h1>Listing Comments</h1>
 
-<p>
-	<%= link_to "Add a new comment" , new_comment_path %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.content %></td>
+        <td><%= link_to 'Show', [@post , comment] %></td>
+        <td><%= link_to 'Edit', edit_post_comment_path(@post , comment) %></td>
+        <td><%= link_to 'Destroy', [@post , comment] , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_post_comment_path(@post) %>
