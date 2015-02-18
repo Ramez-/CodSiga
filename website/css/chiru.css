@@ -1,0 +1,110 @@
+<!--CSS-->
+	<style>
+	
+		
+		h1{
+			font-family: 'Roboto', sans-serif;
+			color:#333;
+			font-size: 1.5em;
+		}
+		
+		
+		#scroll-down {
+			position:relative;
+			width:100%;
+			height: 100%;
+			background-color: #fb403a;
+			text-align: center;
+			padding-top:25%;
+			padding-bottom: 25%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		
+		#see-it {
+			width:100%;
+			height: 100px;
+			background-color: #fff;
+			text-align: center;
+			padding-top:25%;
+			padding-bottom: 25%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#try-it {
+			width:100%;
+			height: 100px;
+			background-color: #e5e5e5;
+			text-align: center;
+			padding-top:25%;
+			padding-bottom: 25%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		
+		
+			.scroll-to-top 
+		{ position: fixed;
+				   background:url(E:\IMP\WORK\html5up-escape-velocity\css\images\scroll-to-top.png) no-repeat;
+					   cursor: pointer;
+			
+		   bottom: 1em;
+				   right: 100px;
+
+		   width:55px;
+					   height: 55px;
+
+		   padding-right: 1em;
+				   display: none;
+
+		   z-index: 999;
+		}
+
+
+		
+/* Media Query Mobile*/
+
+@media screen and (max-width: 600px)
+{
+
+		#scroll-down {
+			width:100%;
+			height: 320px;
+			background-color: #fb403a;
+			text-align: center;
+			padding-top:200px;
+			padding-bottom: 60px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#see-it {
+			width:100%;
+			height: 320px;
+			background-color: #fff;
+			text-align: center;
+			padding-top:200px;
+			padding-bottom: 60px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#try-it {
+			width:100%;
+			height: 320px;
+			background-color: #e5e5e5;
+			text-align: center;
+			padding-top:200px;
+			padding-bottom: 60px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+
+
+}	
+</style>
+<!--CSS Ends-->	
