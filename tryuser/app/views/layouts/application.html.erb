@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CodSiga</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <title></title>
+
+
+
+
+
+
+
+
+
+  
   <title>Tryuser</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+
+
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CodSiga</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+              
+                <%= link_to "New Post" , new_post_path , options = { :class => "btn btn-default" ,:id => "ahmed"} %>
+
+                <form class="navbar-form navbar-right" role="search">
+                    <div id="user_nav">
+                     <% if current_user %>
+                     <p style="color:white;font-size:15px;">
+                      Logged in as <%= current_user.email %>
+                        <%= link_to "Log out", log_out_path , options = { :class => "btn btn-default" , :id => "logoutbutton"}  %>
+                      </p>
+                     <% else %>
+                     <%= link_to '<button type="submit" class="btn btn-default">Sign Up</button>'.html_safe, sign_up_path %> or
+                     <%= link_to '<button type="submit" class="btn btn-default">Sign In</button>'.html_safe, log_in_path %>
+                    <% end %>
+                      </div>
+                    
+                    
+                </form>
+            </div>
+        </center>
+    </div>
+</div>
+
+
+
+  <!--
 <div id="user_nav">
   <% if current_user %>
     Logged in as <%= current_user.email %>.
@@ -16,12 +90,23 @@
     <%= link_to "log in", log_in_path %>
   <% end %>
 </div>
-
+-->
+<div id= "margin"></div>
 <% flash.each do |name, msg| %>
+  <div id = "errorahmed">
+    <div id = "inner">
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  </div>
+</div>
 <% end %>
-
 <%= yield %>
+
+
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
 
 </body>
 </html>
