@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
   # GET /comments/new
   def new
     if session[:user_id].blank?
-      redirect_to @post , notice: "Please Log in to comment"
+      redirect_to @post , alert: "Please Log in to comment"
       false
     end
     @comment = @post.comments.new
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
 
   def check
     if(session[:user_id] != @comment.user_id)
-       redirect_to users_path , notice: "You can't edit a comment that you didn't post"
+       redirect_to users_path , alert: "You can't edit a comment that you didn't post"
        false
     end
   end
