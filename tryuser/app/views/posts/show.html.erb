@@ -18,16 +18,29 @@
 			</th>
 		</tr>
 		<% @comments.each do |c| %>
-		<tr>
-			<td>
-				<%= c.content %>
-				<%= link_to 'Edit' , edit_post_comment_path(@post , c) %> |
-				<%= link_to 'Delete Comment' , [@post , c] , data: {confirmation: 'Are You Sure?'} , method: :delete %>
-			</td>
-		</tr>
+			<tr>
+				<td>
+					<%= c.content %>
+					<%= link_to 'Edit' , edit_post_comment_path(@post , c) %> |
+					<%= link_to 'Delete Comment' , [@post , c] , data: {confirmation: 'Are You Sure?'} , method: :delete %> |
+					<%= link_to 'Reply' , new_post_comment_reply_path(@post , c) %>
+				</td>
+				<% @replies = c.replies %>
+				<% @replies.each do |r| %>
+					<tr>
+						<td>
+							<p>
+								<%= r.content %>
+								<%= link_to 'Edit' , edit_post_comment_reply_path(@post , c ,r) %> |
+								<%= link_to 'Delete Reply' , [@post , c , r] , data: {confirmation: "Are You Sure?"} , method: :delete %>
+							</p>	
+						</td>
+					</tr>
+				<% end %>
+			</tr>
 		<% end %>
 	</table>
 </div>
-<%= link_to 'Add a Comment' , new_post_comment_path(@post) %> |
+<%= link_to 'Add a new comment' , new_post_comment_path(@post) %> |
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
