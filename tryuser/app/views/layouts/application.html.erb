@@ -51,53 +51,37 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">CodSiga</a>
+            <a class="navbar-brand" href="posts">CodSiga</a>
         </div>
         <center>
             <div class="navbar-collapse collapse" id="navbar-main">
-              
-                <%= link_to "New Post" , new_post_path , options = { :class => "btn btn-default" ,:id => "ahmed"} %>
-
+                <% if current_user && current_user.is_auth %>
+                <%= link_to "New Post" , new_post_path , options = { :class => "btn btn-success" ,:id => "post"} %>
+                <% end %>
                 <form class="navbar-form navbar-right" role="search">
-                    <div id="user_nav">
+                    <div id="user_nav" style="color:white;">
                      <% if current_user %>
-                     <p style="color:white;font-size:15px;">
-                      Logged in as <%= current_user.email %>
-                        <%= link_to "Log out", log_out_path , options = { :class => "btn btn-default" , :id => "logoutbutton"}  %>
-                      </p>
+                          Logged in as <%= current_user.email %> <%= link_to "Log out", log_out_path , options = { :class => "btn btn-default" , :id => "logoutbutton"} %>
                      <% else %>
-                     <%= link_to '<button type="submit" class="btn btn-default">Sign Up</button>'.html_safe, sign_up_path %> or
-                     <%= link_to '<button type="submit" class="btn btn-default">Sign In</button>'.html_safe, log_in_path %>
+                     <%= link_to "Sign Up", sign_up_path , options = { :class => "btn btn-default" } %>
+                     <%= link_to "Sign In", log_in_path , options = { :class => "btn btn-default" }%>
                     <% end %>
-                      </div>
-                    
-                    
+                    </div>
                 </form>
             </div>
         </center>
     </div>
 </div>
 
-
-
-  <!--
-<div id="user_nav">
-  <% if current_user %>
-    Logged in as <%= current_user.email %>.
-    <%= link_to "Log out", log_out_path %>
-  <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "log in", log_in_path %>
-  <% end %>
-</div>
--->
 <div id= "margin"></div>
 <% flash.each do |name, msg| %>
-  <div id = "errorahmed">
-    <div id = "inner">
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-  </div>
-</div>
+  <% if name.eql? "alert" %>
+    <div id = "error">
+  <% else %>
+    <div id = "notice">
+  <% end %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    </div>
 <% end %>
 <%= yield %>
 

@@ -15,7 +15,7 @@ class RepliesController < ApplicationController
 
   # GET /replies/new
   def new
-      redirect_to @post , notice: "Please Log in to reply to a comment" if session[:user_id].blank?
+      redirect_to @post , alert: "Please Log in to reply to a comment" if session[:user_id].blank?
       false
     @reply = @comment.replies.new
   end
@@ -31,7 +31,7 @@ class RepliesController < ApplicationController
 
   def check
     if(session[:user_id] != @reply.user_id)
-       redirect_to users_path , notice: "You can't edit a reply that you didnt post"
+       redirect_to users_path , alert: "You can't edit a reply that you didnt post"
        false
     end
   end

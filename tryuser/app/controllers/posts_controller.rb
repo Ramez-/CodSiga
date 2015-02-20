@@ -16,10 +16,10 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     if session[:user_id].blank?
-      redirect_to posts_path , notice: "Please Log in to create a new post"
+      redirect_to posts_path , alert: "Please Log in to create a new post"
     else
       if !User.find(session[:user_id]).is_auth
-        redirect_to posts_path , notice: "You Don't have the neccessary authorization"
+        redirect_to posts_path , alert: "You Don't have the neccessary authorization"
       end
     end
     @post = Post.new
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def check
     if(session[:user_id] != Post.find(params[:id]).user_id)
-       redirect_to posts_path , notice: "Can not edit a post that does not belong to you"
+       redirect_to posts_path , alert: "Can not edit a post that does not belong to you"
        false
     end
   end
