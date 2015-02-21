@@ -1,10 +1,7 @@
- <div id="margin2"></div>
-
 <div id = "inner">
     <% @posts.each do |post| %>
         <div id ="blog_post"><b><%= link_to post.title.capitalize , post %> <br> <br> by <%= User.find(post.user_id).name.capitalize %></b> Created: <%= time_ago_in_words post.created_at %> ago Last Updated: <%= time_ago_in_words post.updated_at %> ago</div>
-
-        <p class="midpost">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
