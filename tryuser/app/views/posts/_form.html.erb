@@ -13,15 +13,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title ,  options = {:placeholder => "Username"  , :class => "form-control"  ,:style => "width:covre" }%>
+    <%= f.label :title  , options = {:style => "margin-top:10px;font-size:20px"}%><br>
+    <%= f.text_field :title ,  options = {:placeholder => "Title"  , :class => "form-control"  ,:style => "width:covre" }%>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.label :content , options = {:style => "margin-top:10px;font-size:20px"}%><br>
+
+    <%= f.text_area :content ,  options = {:placeholder => "Content"  , :class => "form-control"  ,:style => "width:cover; height:100%;resize:vertical", :rows => "10"}%>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" >
+    <%= f.submit "Submit" , options = {:class => "btn btn-success" , :id => "button-css" } %>
   </div>
 <% end %>
 </div>
