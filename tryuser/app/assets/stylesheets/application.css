@@ -32,6 +32,11 @@
   line-height: 150%;
 }
 
+.midpost{
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 20px;
+}
 
 #post{
 	float: left;

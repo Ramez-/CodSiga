@@ -1,3 +1,4 @@
+<div class="longpost">
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -13,7 +14,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title ,  options = {:placeholder => "Username"  , :class => "form-control"  ,:style => "width:covre" }%>
   </div>
   <div class="field">
     <%= f.label :content %><br>
@@ -23,3 +24,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
