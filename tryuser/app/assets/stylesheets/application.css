@@ -14,8 +14,16 @@
  *= require_self
  */
 
+
+
+.longpost{
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 25px;
+}
 #logoutbutton{
 	margin-left: 10px;
+ 
 }
 
 #blog_post {
@@ -24,43 +32,27 @@
   font-size: 20px;
 }
 
-#input_size{
-	margin: 0;
-	width: 200px;
-}
+
 #post{
 	float: left;
 	margin-top: 10px;
 }
 
-#inner {
 
-/*	display: block;
-    margin-left: auto;
-    margin-right: auto;
-  text-align: center;
-*/	width: 50%;
-	margin: 0 auto;  
-
-}
 
 #error{
 	
 	color :red;
 }
 #margin{
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
-.navbar{
-	background-color: ##18bc9c;	;
+#margin2{
+  margin: 100px;
+}
 
-    }
 
-
-.navbar-brand:hover{
-	
-	}
 
 	html {
   position: relative;
