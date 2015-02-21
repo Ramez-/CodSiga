@@ -55,7 +55,7 @@
         </div>
         <center>
             <div class="navbar-collapse collapse" id="navbar-main">
-                <% if current_user && current_user.is_auth %>
+                <% if is_auth %>
                 <%= link_to "New Post" , new_post_path , options = { :class => "btn btn-success" ,:id => "post"} %>
                 <% end %>
                 <form class="navbar-form navbar-right" role="search">
