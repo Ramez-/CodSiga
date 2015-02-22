@@ -1,0 +1,5 @@
+== README
+
+This is our Company's blog design
+
+All the basic functionalities are working correctly while some additional features are still a work in progress.
