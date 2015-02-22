@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
   # GET /comments/new
   def new
     if session[:user_id].blank?
-      redirect_to @post , notice: "Please Log in to comment"
+      redirect_to @post , alert: "Please Log in to comment"
       false
     end
     @comment = @post.comments.new
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
 
   def check
     if(session[:user_id] != @comment.user_id)
-       redirect_to users_path , notice: "You Must be logged in to edit your account"
+       redirect_to users_path , alert: "You can't edit a comment that you didn't post"
        false
     end
   end
@@ -71,7 +71,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to @post, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to @post, notice: 'Comment was successfully deleted.' }
       format.json { redirect_to @post , status: :ok , location: @post }
     end
   end

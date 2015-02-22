@@ -2,7 +2,7 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * Any CSS and SCSS file within this directory, lib/assets/stylbuesheets, vendor/assets/stylesheets,
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
@@ -13,3 +13,105 @@
  *= require_tree .
  *= require_self
  */
+
+#logoutbutton{
+	margin-left: 10px;
+}
+
+#blog_post {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  line-height: 150%;
+}
+#post{
+	float: left;
+	margin-top: 10px;
+}
+
+#inner {
+
+/*	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  text-align: center;
+*/	width: 50%;
+	margin: 0 auto;  
+
+}
+.midpost{
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+#error{
+	
+	color :red;
+}
+#margin{
+	margin-top: 100px;
+}
+#margin2{
+  margin: 100px;
+}
+.longpost{
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 25px;
+}
+.navbar{
+	background-color: ##18bc9c;
+
+    }
+
+
+.navbar-brand:hover{
+	
+	}
+
+	html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+span{
+	margin-top: 100px;
+	margin-left: 50px;
+	 display:block;
+   
+    margin-right: 50px;
+    word-wrap:break-word;	
+}
+
+
+
+
+

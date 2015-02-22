@@ -1,3 +1,6 @@
+ <div id="margin2"></div>
+
+<div align="center">
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -12,22 +15,23 @@
       <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name , options = {:class => "textdesign"}%><br>
+    <%= f.text_field :name , options = {:placeholder => "Username"  , :class => "form-control"  ,:id=>"input_size"}%>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+    <%= f.label :password , options = {:class => "textdesign"}%><br>
+    <%= f.password_field :password  , options = {:placeholder => "password"  , :class => "form-control"  ,:id=>"input_size"}%>
   </div>
   <div>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation , options = {:class => "textdesign"}%><br />
+    <%= f.password_field :password_confirmation , options = {:placeholder => "password_confirmation"  , :class => "form-control"  ,:id=>"input_size"} %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :email , options = {:class => "textdesign"} %><br>
+    <%= f.text_field :email ,options = {:placeholder => "Email"  , :class => "form-control"  ,:id=>"input_size"} %>
   </div>
   <div class="success">
-    <%= f.submit %>
+    <%= f.submit :submit , options = {:class => "btn btn-success" , :id => "button-css"} %>
   </div>
 <% end %>
+</div>

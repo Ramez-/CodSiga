@@ -2995,7 +2995,7 @@ fieldset[disabled] .btn-info.active {
   border-color: #be780a;
 }
 .btn-warning:active,
-.btn-warning.active,
+.-warning.active,
 .open > .dropdown-toggle.btn-warning {
   background-image: none;
 }

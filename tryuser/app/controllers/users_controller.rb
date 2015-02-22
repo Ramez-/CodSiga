@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def check
     if(session[:user_id] != @user.id)
-       redirect_to users_path , notice: "You Must be logged in to edit your account"
+       redirect_to users_path , alert: "You Must be logged in to edit your account"
        false
     end
   end
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
     @user.destroy
     session[:user_id] = nil;
     respond_to do |format|
-      format.html { redirect_to users_path, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_path, notice: 'User was successfully deleted.' }
       format.json { head :no_content }
     end
   end
