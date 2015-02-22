@@ -1246,3 +1246,10 @@ font-weight:100%;
 	line-height: 70px;
 	text-align: center;
 }
+.black{
+	font-weight: 20px;
+	color: black;
+	display: none;
+	font-family: Perpetua, Baskerville, 'Big Caslon', 'Palatino Linotype', Palatino, 'URW Palladio L', 'Nimbus Roman No9 L', serif;
+	font-size: 20px;
+}
