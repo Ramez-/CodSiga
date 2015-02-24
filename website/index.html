@@ -61,7 +61,7 @@ function popup(url){
 									<!-- Logo -->
 										<div id="logo">
 											<h1><a href="#">CodSiga</a></h1>
-											<span class="byline">We capture Ideas</span>
+											<span class="byline">We Capture Solutions</span>
 										</div>
 									<!-- /Logo -->
 									
@@ -109,7 +109,10 @@ function popup(url){
 											<header class="style1">
 												<h2>Your Codsiga</h2>
 												<p class="byline">Ways we deploy ideas</p>
+												<img id ="ologo" Hight ="220" Width ="220"  src="images/logo.jpg"  >
+												<p class="black"> Our mission is to capture solution for every day's problems , as well as , changing the world by improving the quality of living.<br> We do that by fetching creative and innovative ideas. </p>
 											</header>
+
 											
 												
 										</section>
@@ -283,3 +286,22 @@ Egypt<br>
 
 	</body>
 </html>
+
+
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-2.1.3.min.js">
+</script>
+
+<script >
+	$(document).ready(function() { 
+			$('#features').on('mouseenter','#ologo',function(){
+				$('.black').slideToggle();
+				});
+			$('#features').on('mouseleave','#ologo',function(){
+				$('.black').slideToggle();
+
+			});
+	});
+</script>
+<script >
+

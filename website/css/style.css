@@ -928,7 +928,7 @@
 
 	#header-wrapper
 	{
-		background: url('../images/banner.jpg') center center;
+		background: url('../images/banner1.jpg') center center;
 		background-size: cover;
 	}
 	
@@ -1245,4 +1245,11 @@ font-weight:100%;
 	font-size: 50px;
 	line-height: 70px;
 	text-align: center;
+}
+.black{
+	font-weight: 20px;
+	color: black;
+	display: none;
+	font-family: Perpetua, Baskerville, 'Big Caslon', 'Palatino Linotype', Palatino, 'URW Palladio L', 'Nimbus Roman No9 L', serif;
+	font-size: 20px;
 }
