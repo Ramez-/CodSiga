@@ -928,8 +928,10 @@
 
 	#header-wrapper
 	{
-		background: url('../images/banner1.jpg') center center;
+		background: url('../images/banner1.jpg') top center;
 		background-size: cover;
+		background-size: 8000px 500px;
+   		background-repeat: no-repeat;
 	}
 	
 		#header-wrapper:before

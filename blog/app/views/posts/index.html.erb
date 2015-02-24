@@ -1,0 +1,15 @@
+<div id = "inner">
+    <% @posts.each do |post| %>
+        <div id ="blog_post"><b><%= link_to post.title.capitalize , post %> <br> <br> by <%= User.find(post.user_id).name.capitalize %></b> Created: <%= time_ago_in_words post.created_at %> ago Last Updated: <%= time_ago_in_words post.updated_at %> ago</div>
+        <p><%= post.content %></p>
+    <% end %>
+</div>
+<br>
+
+<%= link_to 'New Post', new_post_path %> | <%= link_to 'User Base' , users_path %>
+
+<% if false %>
+<td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> %>
+<% end %>
