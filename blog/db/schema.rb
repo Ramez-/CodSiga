@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150218115942) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.text     "content"
     t.datetime "created_at", null: false
@@ -29,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150218115942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "replies", force: :cascade do |t|
     t.text     "content"
